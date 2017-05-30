@@ -11,18 +11,7 @@
 let arr1 = [1, false, 2, 0, 3, null, 0, 4, 0, 25];
 
 function moveZeroToEnd(arr) {
- for (let key in arr){
-     let eleminobj = arr[key];
-     if (Array.isArray(eleminobj)) {
-         for (var i = 0; i < eleminobj.length; i++) {
-             var elem = eleminobj[i];
-             if (elem === 0) {
-                 arr.concat(0);
-                 return arr;
-             }
-         }
-     }
- }
+
 }
 
 console.log(moveZeroToEnd(arr1));
