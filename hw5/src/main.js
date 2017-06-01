@@ -8,31 +8,6 @@
  [ 0, 1, null, 2, false, 1, 0 ] => [1,null,2,false,1,0,0]
  */
 
-let arr1 = [1, false, 2, 0, 3, null, 0, 4, 0, 25];
-
-function moveZeroToEnd(arr) {
- for (let key in arr){
-     let eleminobj = arr[key];
-     if (Array.isArray(eleminobj)) {
-         for (var i = 0; i < eleminobj.length; i++) {
-             var elem = eleminobj[i];
-             if (elem === 0) {
-                 arr.concat(0);
-                 return arr;
-             }
-         }
-     }
- }
-}
-
-console.log(moveZeroToEnd(arr1));
-
-
-
-
-
-
-
 /*
  2. Верните сумму двух найменьших чисел в массиве
  
@@ -42,7 +17,6 @@ console.log(moveZeroToEnd(arr1));
  [0,200,10,25,15] => 10
  
  */
-
 function minimalNumber(arr) {
     var minSum = 0;
     for (var i = 0; i < arr.length; i++) {
@@ -54,15 +28,7 @@ function minimalNumber(arr) {
     }
  return minSum;
 }
-
 console.log(minimalNumber([-4,-10,25,10]));
-
-
-
-
-
-
-
 /*
  3. Напишите функцию которая меняет местами имя и фамилию
  nameShuffler('john McClane'); => "McClane john"
@@ -78,9 +44,6 @@ function nameShuffler(name){
 nameShuffler('john McClane');
 nameShuffler('Arnold Schwarzenegger');
 nameShuffler('James Bond');
-
-
-
 /*
  // !
  4. Напишите функцию которая принимает массив с именами и возвращает массив
@@ -88,7 +51,6 @@ nameShuffler('James Bond');
  capMe(['jo', 'nelson', 'jurie'])     // returns ['Jo', 'Nelson', 'Jurie']
  capMe(['KARLY', 'DANIEL', 'KELSEY']) // returns ['Karly', 'Daniel', 'Kelsey']
  */
-
  function capMe(arr){
     string = arr.join(` `)
     string1 = string.toLowerCase().split(` `);
@@ -99,10 +61,6 @@ console.log(string1);
  }
 capMe(['jo', 'nelson', 'jurie']);
 capMe(['KARLY', 'DANIEL', 'KELSEY']);
-
-
-
-
 //@SUPER
 /*
  1. Найдите число отсутствующее в заданной последовательности
