@@ -8,6 +8,23 @@
  [ 0, 1, null, 2, false, 1, 0 ] => [1,null,2,false,1,0,0]
  */
 
+<<<<<<< HEAD
+=======
+let arr1 = [1, false, 2, 0, 3, null, 0, 4, 0, 25];
+
+function moveZeroToEnd(arr) {
+
+}
+
+console.log(moveZeroToEnd(arr1));
+
+
+
+
+
+
+
+>>>>>>> e52e365405c946d476c5d9071519023f11097cec
 /*
  2. Верните сумму двух найменьших чисел в массиве
  
