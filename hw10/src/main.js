@@ -54,6 +54,7 @@ var ezjQuery = {
   add : function(tag, info) {
     let newtag = `<${tag}></${tag}>`;
 
+
     if(this.string) {
       if (info) {
         newtag = `<${tag}>${info}</${tag}>`
@@ -67,6 +68,8 @@ var ezjQuery = {
     return this;
   },
   
+
+
   render : function() {
     let tags = this.string;
     this.string = ``;
@@ -116,7 +119,7 @@ console.log(ezjQuery.render());
 
 // Для выполнивших все задания
 
-//document.write(helloList)
+document.write(helloList)
 
 // @SUPER
 /*
