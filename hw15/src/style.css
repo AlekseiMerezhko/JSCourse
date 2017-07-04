@@ -1,0 +1,19 @@
+h1{
+	text-align: center;
+}
+li{
+	padding-left: 25px;
+	list-style: none;
+}
+button{
+    display: block;
+    margin: 0 auto;
+    margin-top: 35px;
+    padding: 10px 80px;
+    background-color: #00008B;
+    cursor: pointer;
+    color: #edf7fb;
+}
+input[type="checkbox"]{
+	margin: 10px;
+}

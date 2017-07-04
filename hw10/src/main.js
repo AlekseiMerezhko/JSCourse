@@ -54,12 +54,16 @@ var ezjQuery = {
   add : function(tag, info) {
     let newtag = `<${tag}></${tag}>`;
 
+    
+
 
     if(this.string) {
+      let lastTag = this.array[this.array.length - 1];
+      let middle = this.string.indexOf(lastTag) + (lastTag.lastIndexOf('</'));
       if (info) {
         newtag = `<${tag}>${info}</${tag}>`
       }
-      this.string +=newtag;
+      this.string = this.string.slice(0, middle) + newtag + this.string.slice( middle );
     } 
     else {
      this.string = newtag;
