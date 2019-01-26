@@ -98,3 +98,4 @@ class HTML{
 
 }
 
+console.log(`Test Git merge`);
