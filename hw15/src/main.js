@@ -16,13 +16,19 @@ TASK 0
 // 2) Вы должны учесть все возможные варианты
 
 const solution = (str) => {
- const symbol = "abcdefghijklmnopqrstuvwxyz";
-  for (let i = 0; i < symbol.length; i++) {
-    regExp = new RegExp(symbol[i]);
-    if (!regExp.test(str)) return false;
-  }
-  return true;
+ const myStr = `qazwsxedcrfvtgbyhnujmikolp`;
+ const str1 = chekStr(str);
+ const str2 = chekStr(myStr);
+ return str1 === str2;
 };
+
+const chekStr = (string) => {
+  return string
+    .split(``)
+    .filter((elem,index,arr) => arr.indexOf(elem) == index)
+    .sort((a,b) => a > b)
+    .join(``);
+}
 
 console.log(solution("wyyga")) // false
 console.log(solution("qwertyuioplkjhgfdsazxcvbnm")) // true
@@ -50,9 +56,14 @@ console.log(solution("0123456789abcdefghijklmnop")) // false
  [1, [2, [ {a: "b"} ] ] ] => [1, 2, {a: "b"}]
  */
 
+const openBreaket = (arr) => arr.reduce((array, param) => {
+  return !Array.isArray(param) ? array.concat(param) : array.concat(openBreaket(param))
+},[]);
 
 
-
+console.log(openBreaket([[1,2],[3,[4]],5, 10]));
+console.log(openBreaket( [25,10,[10,[15]]] ));
+console.log(openBreaket( [2, [ {a: "b"}, { c: 'd' } ] ]));
 
 
 
